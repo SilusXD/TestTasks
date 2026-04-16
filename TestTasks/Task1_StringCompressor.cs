@@ -46,6 +46,36 @@ namespace TestTasks
 
             return compressedStr.ToString();
         }
+        public static string Decompress(string compressedStr)
+        {
+            if (string.IsNullOrEmpty(compressedStr))
+            {
+                throw new ArgumentException($"Argument \"compressedStr\" is Null or empty");
+            }
 
+            StringBuilder decompressedStr = new StringBuilder();
+
+            int i = 0;
+            while (i < compressedStr.Length)
+            {
+                char ch = compressedStr[i];
+                int count = 1;
+                i++;
+
+                if (i < compressedStr.Length && char.IsDigit(compressedStr[i]))
+                {
+                    count = 0;
+                    while (i < compressedStr.Length && char.IsDigit(compressedStr[i]))
+                    {
+                        count = count * 10 + (compressedStr[i] - '0');
+                        i++;
+                    }
+                }
+
+                decompressedStr.Append(ch, count);
+            }
+
+            return decompressedStr.ToString();
+        }
     }
 }
