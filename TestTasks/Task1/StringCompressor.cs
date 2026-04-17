@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestTasks
+namespace TestTasks.Task1
 {
-    internal class Task1_StringCompressor
+    internal class StringCompressor
     {
         public static string Compress(string baseStr)
         {
