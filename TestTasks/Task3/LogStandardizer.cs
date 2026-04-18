@@ -45,7 +45,7 @@ namespace TestTasks.Task3
             }
         }
 
-        private static string Standardize(string logLine)
+        public static string Standardize(string logLine)
         {
             var parsed = ParseFormat1(logLine);
 
