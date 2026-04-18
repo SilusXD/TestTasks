@@ -1,13 +1,15 @@
 ﻿using System.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using TestTasks.Task1;
+using TestTasks.Task2;
+using TestTasks.Task3;
 
 namespace TestTasks
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-
+            
         }
     }
 }
